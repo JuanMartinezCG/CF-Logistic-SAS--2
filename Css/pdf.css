@@ -1,25 +1,242 @@
-/* Desactivar animaciones */
-* {
-    animation: none !important;
-    transition: none !important;
-}
+/* CSS para impresión/PDF */
+@media print {
+    /* Reset para impresión */
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
 
-/* Ocultar fondo animado */
-.floating-bg {
-    display: none;
-}
+    /* Ocultar elementos no necesarios en PDF */
+    .floating-bg,
+    .btn,
+    nav,
+    .image-card:hover,
+    .service-card:hover,
+    .contact-card:hover,
+    .close-modal {
+        display: none !important;
+    }
 
-/* Forzar colores sólidos */
-body {
-    background: #0c1e3e !important;
-}
+    /* Configurar página */
+    @page {
+        margin: 1cm;
+        size: A4 portrait;
+    }
 
-/* Evitar cortes raros */
-section, header, footer {
-    page-break-inside: avoid;
-}
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
 
-/* Ajustar tamaños para papel */
-.hero-content h2 {
-    font-size: 2.2rem;
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Header para PDF */
+    header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-bottom: 20px !important;
+        padding-bottom: 10px !important;
+        border-bottom: 2px solid #000 !important;
+    }
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    .logo-icon img {
+        width: 60px !important;
+        height: 60px !important;
+        filter: none !important;
+    }
+
+    .logo-text h1 {
+        font-size: 18pt !important;
+        color: black !important;
+        background: none !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+    }
+
+    .logo-text p {
+        font-size: 10pt !important;
+        color: #666 !important;
+    }
+
+    /* Secciones */
+    section {
+        page-break-inside: avoid !important;
+        margin-bottom: 30px !important;
+    }
+
+    h2 {
+        color: #000 !important;
+        font-size: 16pt !important;
+        margin-bottom: 15px !important;
+        page-break-after: avoid !important;
+        border-bottom: 1px solid #ccc !important;
+        padding-bottom: 5px !important;
+    }
+
+    h3 {
+        color: #000 !important;
+        font-size: 14pt !important;
+        margin-bottom: 10px !important;
+    }
+
+    .highlight {
+        color: #000 !important;
+        font-weight: bold !important;
+    }
+
+    /* Hero section */
+    .hero {
+        display: block !important;
+        margin-bottom: 30px !important;
+    }
+
+    .hero-content h2 {
+        font-size: 14pt !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-content p {
+        font-size: 11pt !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* Servicios */
+    .services-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        margin-top: 20px !important;
+    }
+
+    .service-card {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+        page-break-inside: avoid !important;
+    }
+
+    .service-icon {
+        color: #000 !important;
+        font-size: 20pt !important;
+    }
+
+    .service-card h3 {
+        color: #000 !important;
+    }
+
+    .service-card p {
+        color: #333 !important;
+    }
+
+    /* Galería */
+    .image-gallery {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .image-card {
+        height: auto !important;
+        margin-bottom: 20px !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid !important;
+    }
+
+    .image-card img {
+        max-height: 150px !important;
+        object-fit: cover !important;
+    }
+
+    .image-overlay {
+        position: relative !important;
+        background: #f5f5f5 !important;
+        padding: 10px !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .image-overlay h3 {
+        color: #000 !important;
+    }
+
+    .image-overlay p {
+        color: #333 !important;
+    }
+
+    /* Contacto */
+    .contact-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+    }
+
+    .contact-card {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        padding: 15px !important;
+    }
+
+    .contact-icon {
+        color: #000 !important;
+    }
+
+    .contact-card h3 {
+        color: #000 !important;
+    }
+
+    .contact-card p {
+        color: #333 !important;
+    }
+
+    /* Evitar cortes de página */
+    .service-card,
+    .contact-card,
+    .image-card {
+        page-break-inside: avoid !important;
+    }
+
+    /* URLs después de enlaces */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #666;
+    }
+
+    /* Footer */
+    footer {
+        margin-top: 30px !important;
+        padding-top: 20px !important;
+        border-top: 1px solid #000 !important;
+        font-size: 9pt !important;
+        color: #666 !important;
+    }
+
+    /* Ajustar márgenes para evitar cortes */
+    @page :first {
+        margin-top: 2cm;
+    }
+
+    @page :left {
+        margin-right: 2cm;
+    }
+
+    @page :right {
+        margin-left: 2cm;
+    }
 }
