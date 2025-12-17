@@ -1,0 +1,25 @@
+/* Desactivar animaciones */
+* {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Ocultar fondo animado */
+.floating-bg {
+    display: none;
+}
+
+/* Forzar colores sólidos */
+body {
+    background: #0c1e3e !important;
+}
+
+/* Evitar cortes raros */
+section, header, footer {
+    page-break-inside: avoid;
+}
+
+/* Ajustar tamaños para papel */
+.hero-content h2 {
+    font-size: 2.2rem;
+}
