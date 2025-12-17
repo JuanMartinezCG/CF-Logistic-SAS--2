@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF Logistic - Soluciones Logísticas Integrales</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+    <!-- Fondo animado -->
+    <div class="floating-bg">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>CF Logistic</h1>
+                    <p>Soluciones logísticas integrales</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <h2>
+                    Conectamos negocios de manera
+                    <span class="highlight"> rapida, eficiente y confiable</span>
+                </h2>
+                <p>
+                    CF Logistic es una empresa especializada en soluciones logísticas integrales.
+                </p>
+                <p>
+                    Optimizamos cada etapa del proceso logístico.
+                </p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+
+            <div class="image-card">
+                <img src="./assets/Img/imagen Header.jpg" alt="Logística moderna">
+                <div class="image-overlay">
+                    <h3>Logística Integral</h3>
+                    <p>Gestión completa de la cadena de suministro</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Transporte</h3>
+                    <p>Soluciones de transporte terrestre, aéreo y marítimo.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-warehouse"></i></div>
+                    <h3>Almacenamiento</h3>
+                    <p>Centros de distribución con tecnología moderna.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>Distribución</h3>
+                    <p>Gestión eficiente de última milla.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Gestión de Cadena</h3>
+                    <p>Optimización integral de la cadena de suministro.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-gallery" id="galeria">
+            <h2 class="gallery-title">Nuestra Operación</h2>
+
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d" alt="">
+                <div class="image-overlay">
+                    <h3>Centro de Distribución</h3>
+                    <p>Almacenes modernos y seguros</p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="">
+                <div class="image-overlay">
+                    <h3>Transporte</h3>
+                    <p>Encargados del transporte</p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="./assets/Img/jorge-simmons-valenzuela-MLbJlB_I5FU-unsplash.jpg" alt="">
+                <div class="image-overlay">
+                    <h3>Calidad</h3>
+                    <p>Calidad en los productos</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contacto">
+            <section class="contact" id="contacto">
+            <h2>Contacto</h2>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i>  <i class="fas fa-envelope"></i></div> 
+                        <h3>Telefono y Email</h3>
+                        <p>(+57) 3## - 000 00 00</p>
+                        <p><strong>Correo:</strong> info@logistics.com</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Ubicación</h3>
+                        <p>
+                            Nos encontramos ubicados en Santa Marta, Magdalena, Colombia, dentro de la Zona Franca Tayrona.
+                        </p>
+
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Horarios</h3>
+                        <p>Horarios de atención</p>
+                        <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                    </div>
+                </section>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <div class="close-modal" id="closeModal">&times;</div>
+        <div class="modal-content">
+            <img id="modalImage">
+        </div>
+    </div>
+
+    <!-- JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>
